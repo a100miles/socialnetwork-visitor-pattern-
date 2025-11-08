@@ -1,12 +1,12 @@
 package Entities
 
-import "MiniSocial/Visitors"
+import "MiniSocial/Core"
 
 type Story struct {
     Views int
     Title string
 }
 
-func (s *Story) Accept(visitor Visitors.IVisitor) {
+func (s *Story) Accept(visitor Core.IVisitor) {
     visitor.VisitStory(s)
 }

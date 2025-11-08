@@ -1,7 +1,7 @@
 package Entities
 
-import "MiniSocial/Visitors"
+import "MiniSocial/Core"
 
 type IEntity interface {
-    Accept(visitor Visitors.IVisitor)
+    Accept(visitor Core.IVisitor)
 }

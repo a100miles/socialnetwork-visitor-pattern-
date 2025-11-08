@@ -1,12 +1,12 @@
 package Entities
 
-import "MiniSocial/Visitors"
+import "MiniSocial/Core"
 
 type User struct {
     Name  string
     Posts []Post
 }
 
-func (u *User) Accept(visitor Visitors.IVisitor) {
+func (u *User) Accept(visitor Core.IVisitor) {
     visitor.VisitUser(u)
 }

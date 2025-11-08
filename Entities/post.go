@@ -1,6 +1,6 @@
 package Entities
 
-import "MiniSocial/Visitors"
+import "MiniSocial/Core"
 
 type Post struct {
     Title   string
@@ -9,6 +9,6 @@ type Post struct {
     Content string
 }
 
-func (p *Post) Accept(visitor Visitors.IVisitor) {
+func (p *Post) Accept(visitor Core.IVisitor) {
     visitor.VisitPost(p)
 }

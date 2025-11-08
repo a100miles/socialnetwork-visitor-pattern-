@@ -6,19 +6,19 @@ import (
 )
 
 func main() {
-    post1 := Entities.Post{Title: "Go Basics", Likes: 20, Tags: []string{"go", "programming"}, Content: "Learn Go step by step"}
-    post2 := Entities.Post{Title: "Photography Tips", Likes: 50, Tags: []string{"photo", "art"}, Content: "Avoid bad lighting!"}
-    comment := Entities.Comment{Text: "Great post!", Likes: 5}
-    story := Entities.Story{Views: 100, Title: "Weekend Vibes"}
+    post1 := Entities.Post{Title: "shit", Likes: 20, Tags: []string{"black", "programming"}, Content: "i hate ziggas"}
+    post2 := Entities.Post{Title: "actual life", Likes: 50, Tags: []string{"photo", "art"}, Content: "1000-7"}
+    comment := Entities.Comment{Text: "shit as always", Likes: 100}
+    story := Entities.Story{Views: 100, Title: "chillin"}
 
     user := Entities.User{
-        Name:  "Tamerlan",
+        Name:  "a100ma",
         Posts: []Entities.Post{post1, post2},
     }
 
     analytics := &Visitors.AnalyticsVisitor{}
-    moderation := &Visitors.ModerationVisitor{ForbiddenWords: []string{"bad", "ugly"}}
-    recommendation := &Visitors.RecommendationVisitor{TagToRecommend: "go"}
+    moderation := &Visitors.ModerationVisitor{ForbiddenWords: []string{"nigga", "ugly"}}
+    recommendation := &Visitors.RecommendationVisitor{TagToRecommend: "art"}
 
     entities := []Entities.IEntity{&user, &story, &comment, &post1, &post2}
 
